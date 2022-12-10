@@ -14,6 +14,15 @@ function numeroSimetrico(num) {
 
   // Tu código:
 
+  var esreversible = num.toString();
+  var resultado = esreversible.split('').reverse().join('');
+  
+  if (esreversible === resultado){
+    return true;
+  } else {
+    return false;
+  }
+
 }
 
 // No modifiques nada debajo de esta linea //
