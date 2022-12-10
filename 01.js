@@ -11,6 +11,13 @@ function soloNumeros(array) {
   // soloNumeros([1, 'Henry', 2]) debe retornar [1, 2]
 
   // Tu código aca:
+  nuevoarray = [];
+  nuevoarray = array.filter(numero => {
+    if  (numero > 0){
+      return numero;
+    }
+  })
+  return nuevoarray;
 
 }
 
