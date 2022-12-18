@@ -12,16 +12,14 @@ function stringMasLarga(strings) {
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
   // Tu código aca
-  strings.sort((a,b) => {
-    if(a.length === b.length){
-      return 0;
+  var min = strings[0];
+  for(let i =0; i < strings.length; i++){
+      if(min.length < strings[i].length){
+        min = strings[i];
+      }
     }
-    if (a.length < b.length){
-      return -1;
-    }
-    return 1;
-  })
-  return (strings);
+    return min.toString();
+
 }
 
 // No modifiques nada debajo de esta linea //
