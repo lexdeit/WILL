@@ -11,7 +11,6 @@ function crearClasePersona() {
       // Inicializar las propiedades de la persona con los valores recibidos como argumento
 
       // Tu código aca:
-
       this.nombre = nombre;
       this.edad = edad;
       this.hobbies = hobbies;
@@ -25,12 +24,13 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
-      var addamigo = {
+
+      let agregaamigo = {
         nombre,
         edad,
       }
 
-      this.amigos.push(addamigo);
+      this.amigos.push(agregaamigo)
 
     }
 
@@ -40,10 +40,12 @@ function crearClasePersona() {
 
       // Tu código aca:
 
-      var addhobby = {
-        hobby
+      let agregarhobby = {
+        hobby,
       }
-      this.hobbies.push(addhobby.hobby);
+
+      this.hobbies.push(agregarhobby.hobby);
+
     }
     getFriends() {
       // El método 'getFriends' debe retornar un arreglo con sólo los nombres del arreglo de amigos
@@ -54,12 +56,13 @@ function crearClasePersona() {
 
       // Tu código aca:
 
-      var arraynombres = [];
 
+      var listadeamigos = [];
       for(let i = 0; i < this.amigos.length; i++){
-        arraynombres[i] = this.amigos[i].nombre;
+        listadeamigos.push(this.amigos[i].nombre);
       }
-      return arraynombres;
+      return listadeamigos;
+
     }
 
     getHobbies() {
@@ -68,10 +71,8 @@ function crearClasePersona() {
       // persona.getHobbies() debe devolver ['correr', 'dormir', 'nadar']
 
       // Tu código aca:
-      var arrayhobbies = [];
-      arrayhobbies = this.hobbies.map((elemento) => elemento);
-      return arrayhobbies;
 
+      return this.hobbies;
     }
 
     getPromedioEdad() {
@@ -91,19 +92,12 @@ function crearClasePersona() {
 
       // Tu código aca:
 
-      var promedio = 0;
-      for(let i = 0; i < this.amigos.length; i++){
-        promedio += this.amigos[i].edad / this.amigos.length;
-      }
-      return promedio;
     }
-
-
   };
 
   return Persona;
 }
-
+// Resultados
 // No modifiques nada debajo de esta linea //
 
 module.exports = crearClasePersona
